@@ -69,9 +69,6 @@ export default class BaseProvider {
 
                 link = `https://${baseUrl[2]}${link}`;
 			}
-
-			// Remove title from company (glassdoor)
-			data.company.replace(data.title, '');
 			
 			jobs.push({ ...data, link });
 		});

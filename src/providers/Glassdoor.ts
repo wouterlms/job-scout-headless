@@ -9,7 +9,7 @@ export default class Glassdoor extends BaseProvider {
 			elements: {
 				job: '.react-job-listing',
 				title: '.jobTitle',
-				company: '.jobLink',
+				company: '.jobLink>span',
 				location: '.loc',
 				salary: '',
 				link: '.jobLink',
