@@ -2,7 +2,6 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 
 import utils from '../utils';
-
 import { Settings } from './../types/settings.d';
 import { Job } from './../types/job.d';
 
@@ -16,7 +15,7 @@ export default class BaseProvider {
 		this.settings = settings;
 	}
 
-	constructUrl(keyword: string): string {
+	private constructUrl(keyword: string): string {
 		return utils.createStringFromTemlate(this.params.templateUrl, {
 			keyword,
 			location: this.settings.location,
@@ -26,7 +25,6 @@ export default class BaseProvider {
 	}
 
 	private async scrape(url: string): Promise<any> {
-		console.log('Scraping', url);
 		try {
 			const res = await axios.get(url);
 			return cheerio.load(res.data);
