@@ -1,5 +1,5 @@
 class Utils {
-	createStringFromTemlate(template: string, variables: object): string {
+	createStringFromTemplate(template: string, variables: object): string {
 		return template.replace(new RegExp("\{([^\{]+)\}", "g"), (_unused, varName) => {
 			return variables[varName];
 		});
@@ -10,7 +10,9 @@ class Utils {
 	}
 
 	cleanString(dirtyString: string) {
-		return dirtyString.replace(/[^a-zA-Z ]/g,"");
+		return dirtyString
+			.replace(/\n/g, "")
+			.replace(/\t/g, "");
 	}
 
 	// minutes to milliseconds
