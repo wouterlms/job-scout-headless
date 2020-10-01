@@ -1,4 +1,4 @@
-class Common {
+class Utils {
 	createStringFromTemlate(template: string, variables: object): string {
 		return template.replace(new RegExp("\{([^\{]+)\}", "g"), (_unused, varName) => {
 			return variables[varName];
@@ -19,4 +19,4 @@ class Common {
 	}
 }
 
-export default new Common();
+export default new Utils();
