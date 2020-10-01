@@ -16,7 +16,7 @@ export default class BaseProvider {
 	}
 
 	private constructUrl(keyword: string): string {
-		return utils.createStringFromTemlate(this.params.templateUrl, {
+		return utils.createStringFromTemplate(this.params.templateUrl, {
 			keyword,
 			location: this.settings.location,
 			radius: this.settings.radius,
