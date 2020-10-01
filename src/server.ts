@@ -16,8 +16,8 @@ const settings: Settings = {
     radius: 50,
     keywords: [
         "web developer",
-        // "front end developer",
-        // "full stack developer",
+        "front end developer",
+        "full stack developer",
     ],
     mustContain: [
 		"web",
