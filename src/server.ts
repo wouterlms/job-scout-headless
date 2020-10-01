@@ -85,7 +85,7 @@ cache.init().then(() => {
 	
 	setInterval(() => {
 		getJobs();
-	}, utils.minutes(1));
+	}, utils.minutes(10));
 
 	getJobs();
 });
