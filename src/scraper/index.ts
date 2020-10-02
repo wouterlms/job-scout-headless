@@ -1,5 +1,5 @@
 import cache from './cache';
-import utils from './utils';
+import utils from '../utils';
 import email from './email';
 
 import { Job } from '../types/job';

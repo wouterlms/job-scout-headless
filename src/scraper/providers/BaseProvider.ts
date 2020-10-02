@@ -3,7 +3,7 @@ const cheerio = require("cheerio");
 
 import { Job } from '../../types/job';
 import { Settings } from '../../types/settings';
-import utils from '../utils';
+import utils from '../../utils';
 
 export default class BaseProvider {
 
