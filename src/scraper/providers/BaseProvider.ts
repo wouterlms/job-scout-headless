@@ -111,7 +111,9 @@ export default class BaseProvider {
 			let jobs: Job[] = [];
 
 			results.forEach(result => {
-				jobs = [...jobs, ...this.filterJobsFromHTML(result).filter((job: Job) => this.isValidTitle(job.title))];
+				if (result !== null) {
+					jobs = [...jobs, ...this.filterJobsFromHTML(result).filter((job: Job) => this.isValidTitle(job.title))];
+				}
 			});
 
 			resolve(jobs);
