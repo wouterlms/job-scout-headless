@@ -3,16 +3,13 @@ import utils from '../utils';
 import email from './email';
 
 import { Job } from '../types/job';
-import { Settings } from '../types/settings';
 
 export default class Scraper {
     providers: any[];
-	settings: Settings;
 	interval: ReturnType<typeof setInterval>;
 
-    constructor(providers, settings: Settings) {
+    constructor(providers) {
         this.providers = providers;
-		this.settings = settings;
 		
 		cache.init().then(() => {
 			console.log('Cache initialized');

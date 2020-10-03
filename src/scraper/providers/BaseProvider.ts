@@ -6,7 +6,6 @@ import { Settings } from '../../types/settings';
 import utils from '../../utils';
 
 export default class BaseProvider {
-
 	params: any;
 	settings: Settings;
 
@@ -34,7 +33,6 @@ export default class BaseProvider {
 	}
 
 	private filterJobsFromHTML(html: any): Job[] {
-
 		const jobs: Job[] = [];
 		
 		html(this.params.elements.job).each((i, el) => {
@@ -47,7 +45,6 @@ export default class BaseProvider {
 			};
 
 			Object.keys(data).forEach((key: string) => {
-
 				const elementTag: string = this.params.elements[key];
 
 				data[key] = utils.cleanString(

@@ -52,6 +52,4 @@ const creativeSkills: CreativeSkills = new CreativeSkills(settings);
 const jobat: Jobat = new Jobat(settings);
 const stepStone: StepStone = new StepStone(settings);
 
-const providers = [indeed, jooble, glassdoor, creativeSkills, jobat, stepStone];
-
-new Scraper(providers, settings);
+new Scraper([indeed, jooble, glassdoor, creativeSkills, jobat, stepStone]);
