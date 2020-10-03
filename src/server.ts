@@ -3,6 +3,7 @@ import Glassdoor from "./scraper/providers/Glassdoor";
 import Indeed from "./scraper/providers/Indeed";
 import Jobat from "./scraper/providers/Jobat";
 import Jooble from "./scraper/providers/Jooble";
+import StepStone from "./scraper/providers/StepStone";
 import Scraper from './scraper';
 import { Settings } from "./types/settings";
 
@@ -49,7 +50,8 @@ const jooble: Jooble = new Jooble(settings);
 const glassdoor: Glassdoor = new Glassdoor(settings);
 const creativeSkills: CreativeSkills = new CreativeSkills(settings);
 const jobat: Jobat = new Jobat(settings);
+const stepStone: StepStone = new StepStone(settings);
 
-const providers = [indeed, jooble, glassdoor, creativeSkills, jobat];
+const providers = [indeed, jooble, glassdoor, creativeSkills, jobat, stepStone];
 
 new Scraper(providers, settings);
